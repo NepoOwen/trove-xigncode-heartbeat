@@ -1,6 +1,6 @@
 // File: main.hpp
 // Author: NepoOwen
-// https://github.com/NepoOwen/trove-xigncode
+// https://github.com/NepoOwen/trove-xigncode-heartbeat
 
 #include "challenge.hpp"
 #include <cstdint>

@@ -1,6 +1,6 @@
 // File: bypass.hpp
 // Author: NepoOwen
-// https://github.com/NepoOwen/trove-xigncode
+// https://github.com/NepoOwen/trove-xigncode-heartbeat
 // ============================================================================
 // Standalone key generator: decode the daily M1 key from the A2 challenge.
 //   challenge = hex8(ts) + Z85(body)
