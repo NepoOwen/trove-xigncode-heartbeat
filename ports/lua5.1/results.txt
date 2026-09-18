@@ -1,0 +1,60 @@
+========================================================================
+Challenge #1
+========================================================================
+  challenge : 6a891fc3mz865r6:zF0SSi2?(U+&Fcb=K7xTTq4f(>kt(T<80rr91DYB.D+n7m36a)]b4DU=BA.okrBj9^6GjN>[1RgBF4-0mvQalc/w7cNZ=7YuGrg+*#UjMx5L[<yx:N7iH}5v&^:Mb&e:-.(CGvPWJ/4muSBMM)hUHct4=m#zSxlh0<(+y@iSS2>2dg&JEoxwncm8[>gCiG/OjcKL]MwS?5T3}seskXJsP(U!f-2V^qRG7T66K^4Rxxnv.IE]YC+dF!tvKW7Vg84MP:[*kV/+cMNF/2mx:{:k%cu+EWkh2=i7eeh4Q4E!W(:@U<<ABqtTH8TyDprY81kS1(*&ArwBRekQS1^6xjtBpkOVMk%Mqb-y5S(ei41j(uzvGHPU-%&(z8C!cL.a)]!zj]Be)vLHuXo}ZC56d7G[D6dp^)on4aBFWBWrXL4T+^)9A8kW6QVQQHS@(SuTJ:I/t$0=uOz(gOO31S5GFPjUT=cZd=c^f@>kYw.<TOXRud#*-CdZEl=hU&5x8BMXOg&=W{i1a2{(q])OW8>g36O1sBc3Nm+m&@R[Taoo.(u(^5s(?GZsgiZ$c^8s7F*+7MED?(^m]T@l4m6JG9akXx1.LxqpBck1oD4Da+74U=YwU3ivEgNC2p0N4iM<KLFO@<lyL=6iE}!l@$j@Qj#{nmB.]KWa<m]15Ot4WcHgiB9$W$FZU/u/CkV.7mwC]Nwr9lOOBoSxR3d47EoHTu556slB=w6*n:W2.Vm@[}l=B1=2S<SeR0HlrfN^NvSYPUnl4ptZOJ2^9!q:/Y(!Ae*hCMi>WwI?C%g@=gF^jr>QLIs7Y&J?NcrmtBoUo+7wqW<U{X/Bc2yd1OX-A326C3&+MA0zT)NuHT5!pX(5FSzh+ZQ%rCfJe&4gWvr{x:6Xs!<tuGuQqS1h<T]n/4O]&:])QiC4mrO@DI6^&$M-RAJ2@H1#BHdNfj5<kmDue4{&/pd[?^M@0%cyQO=YLas#s$Tk?Z?HYL8-]K9xeldC6bm*m1jaOX)JEQG*>!LAjX+2AxA!$kFP@iK0cV][.BK<I>CKFu/#Q(my6B5ZG9yxJN+DPj=+Iqwd%yu=BXFPdo3:e^WQ}t^gB#MzenO9%^Dhr6G85]mahrQuM(%pCTjxL>-6]cEBd7uz5<eVa5lJjEdD2P6t^0FV63C%5
+  timestamp : 0x6a891fc3  (= 1787371459 decimal)
+  day-counter: 95
+  response prefix (pp): 95
+  key (M1)  : "wmEKw=rRCQ"  (len=10)
+  M1 (MD5)  : c373f065b80081692912c1fcb4cbb4ff
+  M2 (MD5)  : 3342f7a9e7a61a3b729a33f00455393b
+  response  : 956a891fc3_c373f065b80081692912c1fcb4cbb4ff_3342f7a9e7a61a3b729a33f00455393b
+
+========================================================================
+Challenge #2
+========================================================================
+  challenge : 6a8b247bmz865r6:zF0SSi2IJxu5Fcb=K8V{6u5Eepot(T<80rr91DYB.D+n7m36a)]b4DU=BA.okrBj9^6GjN>[1RgBF4-0mvQalc/w7cNZ=7YuGrg+*#UjMx5L[<yx:N7iH}5v&^:Mb&e:-.(CGvPWJ/4muSBMM)hUHct4=m#zSxlh0<(+y@iSS2>2dg&JEoxwncm8[>gCiG/OjcKL]MwS?5T3}seskXJsP(U!f-2V^qRG7T66K^4Rxxnv.IE]YC+dF!tvKW7Vg84MP:[*kV/+cMNF/2mx:{:k%cu+EWkh2=i7eeh4Q4E!W(:@U<<ABqtTH8TyDprY81kS1(*&ArwBRekQS1^6xjtBpkOVMk%Mqb-y5S(ei41j(uzvGHPU-%&(z8C!cL.a)]!zj]Be)vLHuXo}ZC56d7G[D6dp^)on4aBFWBWrXL4T+^)9A8kW6QVQQHS@(SuTJ:I/t$0=uOz(gOO31S5GFPjUT=cZd=c^f@>kYw.<TOXRud#*-CdZEl=hU&5x8BMXOg&=W{i1a2{(q])OW8>g36O1sBc3Nm+m&@R[Taoo.(u(^5s(?GZsgiZ$c^8s7F*+7MED?(^m]T@l4m6JG9akXx1.LxqpBck1oD4Da+74U=YwU3ivEgNC2p0N4iM<KLFO@<lyL=6iE}!l@$j@Qj#{nmB.]KWa<m]15Ot4WcHgiB9$W$FZU/u/CkV.7mwC]Nwr9lOOBoSxR3d47EoHTu556slB=w6*n:W2.Vm@[}l=B1=2S<SeR0HlrfN^NvSYPUnl4ptZOJ2^9!q:/Y(!Ae*hCMi>WwI?C%g@=gF^jr>QLIs7Y&J?NcrmtBoUo+7wqW<U{X/Bc2yd1b^Gk:Y8&SOi90zbf$=:QTcdEFa=T3gXIfxC[o:Tm!PI}Bp]2PUbcAvSIik(x/G>]OO%-cA}>?.mBXdb*T<W>7fUYoF>yAvPtbP2)q:0<DLjGH)HG3bC?}(wj}O?fgs6ewu?goD1ClO{pHG)UsRj.Q>Or[.KG${7[Uexodzi:w)Xh/uQQVQ?knqOaDvz6]qA2!tU}c!xbASN2EjUs1i(])Fd0JQ!@*U.qSAr7r/hL#(KMyq6%*Pi2Jf<1m0CYu6O&%UX=wIDuo24.)V8bRyidoAl6=Ux:?OBv9Kl.}8tN1*aA]nrNRcy{-mFx065!nX$j
+  timestamp : 0x6a8b247b  (= 1787503739 decimal)
+  day-counter: 96
+  response prefix (pp): 96
+  key (M1)  : "GQ2{O0c_^mOBJx"  (len=14)
+  M1 (MD5)  : 03d94564bc972e9ddea2e096bc0054f7
+  M2 (MD5)  : dd0a0b422320b1950bb9c74dd1f52d44
+  response  : 966a8b247b_03d94564bc972e9ddea2e096bc0054f7_dd0a0b422320b1950bb9c74dd1f52d44
+
+========================================================================
+Challenge #3
+========================================================================
+  challenge : 6aa85202mz865r6:zF0SSi2N<0qoFcb=K9%hGy76:*tt(T<80rr91DYB.D+n7m36a)]b4DU=BA.okrBj9^6GjN>[1RgBF4-0mvQalc/w7cNZ=7YuGrg+*#UjMx5L[<yx:N7iH}5v&^:Mb&e:-.(CGvPWJ/4muSBMM)hUHct4=m#zSxlh0<(+y@iSS2>2dg&JEoxwncm8[>gCiG/OjcKL]MwS?5T3}seskXJsP(U!f-2V^qRG7T66K^4Rxxnv.IE]YC+dF!tvKW7Vg84MP:[*kV/+cMNF/2mx:{:k%cu+EWkh2=i7eeh4Q4E!W(:@U<<ABqtTH8TyDprY81kS1(*&ArwBRekQS1^6xjtBpkOVMk%Mqb-y5S(ei41j(uzvGHPU-%&(z8C!cL.a)]!zj]Be)vLHuXo}ZC56d7G[D6dp^)on4aBFWBWrXL4T+^)9A8kW6QVQQHS@(SuTJ:I/t$0=uOz(gOO31S5GFPjUT=cZd=c^f@>kYw.<TOXRud#*-CdZEl=hU&5x8BMXOg&=W{i1a2{(q])OW8>g36O1sBc3Nm+m&@R[Taoo.(u(^5s(?GZsgiZ$c^8s7F*+7MED?(^m]T@l4m6JG9akXx1.LxqpBck1oD4Da+74U=YwU3ivEgNC2p0N4iM<KLFO@<lyL=6iE}!l@$j@Qj#{nmB.]KWa<m]15Ot4WcHgiB9$W$FZU/u/CkV.7mwC]Nwr9lOOBoSxR3d47EoHTu556slB=w6*n:W2.Vm@[}l=B1=2S<SeR0HlrfN^NvSYPUnl4ptZOJ2^9!q:/Y(!Ae*hCMi>WwI?C%g@=gF^jr>QLIs7Y&J?NcrmtBoUo+7wqW<U{X/Bc2yd1ai0e):YjurFDgG}GSK>F5b!@3)$pRfJwn0:3[#16?M@f-[&Qg4ZxpE.g&VbeGOo8h(7{Qfe$fZWVXJ39Hh2A}Yw>^u?f!j?nBe17krI6.<j8R(A>uI9sKk*g!ejPXc^lACNxH?!ZGKHkPHF?tOs1iWTFYx8{qe<NN+oN3i6F^n[bwV69{d#X{<ggVhWgfE6qp?Ed4R?XR5(cK^q5q5gkR:cKE#o5dzc%lY][7FAu<nz&7@k9Z?$n%Ehs%}A-d*1/.JR)T=zb%wcsGBEDs+sR^YeR0gKv4RKkOgvEwP)OgP4.O^r1{*T=2TDa)/EMALtN
+  timestamp : 0x6aa85202  (= 1789415938 decimal)
+  day-counter: 118
+  response prefix (pp): 19
+  key (M1)  : "45(3LFZlh(HYFmskX<n"  (len=19)
+  M1 (MD5)  : b2e317a7152cda88392fe1b316268dd0
+  M2 (MD5)  : 8cc3b836a55e794b56591bf23acdbfba
+  response  : 196aa85202_b2e317a7152cda88392fe1b316268dd0_8cc3b836a55e794b56591bf23acdbfba
+
+========================================================================
+Challenge #4
+========================================================================
+  challenge : 6aa88af2mz865r6:zF0SSi2&61x=Fcb=K8V{6u5Eepot(T<80rr91DYB.D+n7m36a)]b4DU=BA.okrBj9^6GjN>[1RgBF4-0mvQalc/w7cNZ=7YuGrg+*#UjMx5L[<yx:N7iH}5v&^:Mb&e:-.(CGvPWJ/4muSBMM)hUHct4=m#zSxlh0<(+y@iSS2>2dg&JEoxwncm8[>gCiG/OjcKL]MwS?5T3}seskXJsP(U!f-2V^qRG7T66K^4Rxxnv.IE]YC+dF!tvKW7Vg84MP:[*kV/+cMNF/2mx:{:k%cu+EWkh2=i7eeh4Q4E!W(:@U<<ABqtTH8TyDprY81kS1(*&ArwBRekQS1^6xjtBpkOVMk%Mqb-y5S(ei41j(uzvGHPU-%&(z8C!cL.a)]!zj]Be)vLHuXo}ZC56d7G[D6dp^)on4aBFWBWrXL4T+^)9A8kW6QVQQHS@(SuTJ:I/t$0=uOz(gOO31S5GFPjUT=cZd=c^f@>kYw.<TOXRud#*-CdZEl=hU&5x8BMXOg&=W{i1a2{(q])OW8>g36O1sBc3Nm+m&@R[Taoo.(u(^5s(?GZsgiZ$c^8s7F*+7MED?(^m]T@l4m6JG9akXx1.LxqpBck1oD4Da+74U=YwU3ivEgNC2p0N4iM<KLFO@<lyL=6iE}!l@$j@Qj#{nmB.]KWa<m]15Ot4WcHgiB9$W$FZU/u/CkV.7mwC]Nwr9lOOBoSxR3d47EoHTu556slB=w6*n:W2.Vm@[}l=B1=2S<SeR0HlrfN^NvSYPUnl4ptZOJ2^9!q:/Y(!Ae*hCMi>WwI?C%g@=gF^jr>QLIs7Y&J?NcrmtBoUo+7wqW<U{X/Bc2yd1B:B$^a^1BV4GIlshH*Qkqhdx03@MyJ9]I&f%b)<LUQXE4=yMc*d..Sma2oZIzAFXOw>bF#@.rv99rJ7K58L9R2[AG2/8[u9:zjU$Ss+X@8#j2eunA(w&yY@n[9R2GjKzFStNQ9XpNG3s(ZLG)&Dc.7aX#1usfs)y5k9V10griu{?vWP^?vD>.k@Ms@F2KCVcrXHJz.(bGo4^&ITNC!y+q1Lt4]+#SaOra>Sc[bAB5o1O{wi50!F.h1gP%}bj-AG^>&2}tE^@l0NEXs*e2.]O1q=CF/*{tney.h4!Fu9sG{}aPAZy5-k&6cr%4L@P2YmE
+  timestamp : 0x6aa88af2  (= 1789430514 decimal)
+  day-counter: 119
+  response prefix (pp): 20
+  key (M1)  : ".d2LNNXIz10(r^"  (len=14)
+  M1 (MD5)  : 6f10df12505600b142d87c7d1ae754e2
+  M2 (MD5)  : 209b4c6b48d31b64e8d9bd445c3a69f2
+  response  : 206aa88af2_6f10df12505600b142d87c7d1ae754e2_209b4c6b48d31b64e8d9bd445c3a69f2
+
+========================================================================
+Challenge #5
+========================================================================
+  challenge : 6aad1ed9mz865r6:zF0SSi2>N!kCFcb=K7xTTq4f(>kt(T<80rr91DYB.D+n7m36a)]b4DU=BA.okrBj9^6GjN>[1RgBF4-0mvQalc/w7cNZ=7YuGrg+*#UjMx5L[<yx:N7iH}5v&^:Mb&e:-.(CGvPWJ/4muSBMM)hUHct4=m#zSxlh0<(+y@iSS2>2dg&JEoxwncm8[>gCiG/OjcKL]MwS?5T3}seskXJsP(U!f-2V^qRG7T66K^4Rxxnv.IE]YC+dF!tvKW7Vg84MP:[*kV/+cMNF/2mx:{:k%cu+EWkh2=i7eeh4Q4E!W(:@U<<ABqtTH8TyDprY81kS1(*&ArwBRekQS1^6xjtBpkOVMk%Mqb-y5S(ei41j(uzvGHPU-%&(z8C!cL.a)]!zj]Be)vLHuXo}ZC56d7G[D6dp^)on4aBFWBWrXL4T+^)9A8kW6QVQQHS@(SuTJ:I/t$0=uOz(gOO31S5GFPjUT=cZd=c^f@>kYw.<TOXRud#*-CdZEl=hU&5x8BMXOg&=W{i1a2{(q])OW8>g36O1sBc3Nm+m&@R[Taoo.(u(^5s(?GZsgiZ$c^8s7F*+7MED?(^m]T@l4m6JG9akXx1.LxqpBck1oD4Da+74U=YwU3ivEgNC2p0N4iM<KLFO@<lyL=6iE}!l@$j@Qj#{nmB.]KWa<m]15Ot4WcHgiB9$W$FZU/u/CkV.7mwC]Nwr9lOOBoSxR3d47EoHTu556slB=w6*n:W2.Vm@[}l=B1=2S<SeR0HlrfN^NvSYPUnl4ptZOJ2^9!q:/Y(!Ae*hCMi>WwI?C%g@=gF^jr>QLIs7Y&J?NcrmtBoUo+7wqW<U{X/Bc2yd14d6pA:fI9Sc[UKzklNxy58/SDxT9F+n/hRs^d81N7x<eCf/wjKt(9rapAlbMH+7?AQcp:mkVS>10Io=<U#%91I{$^Fk5Agz.DBbn1o5zQ9Iy{K3&K7.C@3wz*]8u*JT.(V.W08TQQ(6?vulTTANhq:flZAXm>:NjF0iEQcZDxTH>}jN[X<R1a:wKgRgqRC99{XT}9e7RdjR[Y5yxdU^lX^5+vJ1!(R@!%5[KUd.K<TcRn.YpR2b.evDJ.X1!UNM}Yd2Gp4%!Oo8bY*<V81+gR5J^.VRs{vNSoMKiok-LD#w&cO}fdXa.7kJvEXB.k2bt
+  timestamp : 0x6aad1ed9  (= 1789730521 decimal)
+  day-counter: 122
+  response prefix (pp): 23
+  key (M1)  : ".Ye(r)40ma"  (len=10)
+  M1 (MD5)  : 0d6b0cdd49e959fc5a12d5f35b35097a
+  M2 (MD5)  : 8d14180761bb0073f23bd74e1297a2a7
+  response  : 236aad1ed9_0d6b0cdd49e959fc5a12d5f35b35097a_8d14180761bb0073f23bd74e1297a2a7
+
