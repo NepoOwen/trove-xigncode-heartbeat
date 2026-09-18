@@ -140,7 +140,7 @@ via `detail::xem::solve` (RSA → Z85 → LZMA1 → MD5), then returning it thro
 located response callback.
 
 For the full algorithm, see [`architecture.md`](architecture.md) and
-[`../src/xem_update.md`](../src/xem_update.md).
+[`../src/xem_update.md`](../project/src/xem_update.md).
 
 ---
 
