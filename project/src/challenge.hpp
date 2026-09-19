@@ -333,9 +333,9 @@ namespace detail {
             };
 
             // decode the M1 key from the A2 challenge; returns key length (0 on failure)
-            static int decode_key(const std::string& a2, char* out_key) {
+            static int decode_key(const std::string& challenge, char* out_key) {
                 uint8_t body[932];
-                size_t blen = z85_decode(a2.data() + 8, a2.size() - 8, body);
+                size_t blen = z85_decode(challenge.data() + 8, challenge.size() - 8, body);
                 if (blen < 36 + 128 * 7) return 0;
 
                 uint8_t stream[875];
@@ -555,11 +555,11 @@ namespace detail {
 
         } // namespace solve
 
-        inline std::string solve(const std::string& a2) {
-            if (a2.size() < 8) return std::string();
+        inline std::string solve(const std::string& challenge) {
+            if (challenge.size() < 8) return std::string();
             uint32_t ts = 0;
             for (int i = 0; i < 8; ++i) {
-                char c = a2[i];
+                char c = challenge[i];
                 uint8_t v = (c >= '0' && c <= '9') ? uint8_t(c - '0')
                     : (c >= 'a' && c <= 'f') ? uint8_t(c - 'a' + 10)
                     : (c >= 'A' && c <= 'F') ? uint8_t(c - 'A' + 10)
@@ -567,11 +567,11 @@ namespace detail {
                 ts = (ts << 4) | v;
             }
             char key[48] = { 0 };
-            if (key::decode_key(a2, key) == 0) return std::string();
+            if (key::decode_key(challenge, key) == 0) return std::string();
             uint8_t m1[16], m2[16];
             challenge::mac_compute(ts, key, m1, m2);
-            std::string result = challenge::generate_a3(ts, m1, m2);
-            return result;
+            std::string response = challenge::generate_a3(ts, m1, m2);
+            return response;
         }
 
     } // namespace xem

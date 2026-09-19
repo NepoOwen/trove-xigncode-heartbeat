@@ -23,10 +23,8 @@ than fixed addresses, since the binary shifts between game updates.
 
 | Function | Signature | Signature bytes |
 |----------|-----------|-----------------|
-| `AC_NetworkSend_Guarded` | `char __fastcall AC_NetworkSend_Guarded(void *Src, size_t Size, __int64 a3)` | `48 8B C4 48 89 58 ? 4C 89 40 ? 55` |
-| `AC_OnProbeResponse` | `void __fastcall AC_OnProbeResponse(__int64 a1, __int64 a2, const char *a3, unsigned __int64 a4, __int64 *a5)` | `48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 48 8B 9C 24 ? ? ? ? 49 8B F1` |
-| `AC_SendStateChange` | `__int64 AC_SendStateChange(unsigned int a1, ...)` | `89 4C 24 ? 48 89 54 24 ? 4C 89 44 24 ? 4C 89 4C 24 ? 48 83 EC` |
-| `AC_Watchdog_Startup` | `void AC_Watchdog_Startup()` | `40 55 48 8D AC 24 ? ? ? ? 48 81 EC ? ? ? ? 80 3D ? ? ? ? 00` |
+| `AC_SendStateChange` | `__int64 __fastcall AC_SendStateChange(unsigned int a1, unsigned __int64 *a2)` | `48 89 5C 24 ? 57 48 83 EC ? 48 8B 05 ? ? ? ? 48 8B DA 8B F9 48 85 C0` |
+| `AC_OnProbeResponse` | `int __fastcall AC_OnProbeResponse(unsigned __int64 a1, const char *a2, const char *a3, size_t a4, unsigned __int64 a5)` | `48 8B C4 48 83 EC ? 48 89 58 ? 48 8B 9C 24` |
 
 > `?` denotes a wildcard byte (a register/offset/immediate that varies between builds).
 
@@ -70,9 +68,9 @@ The flow is:
 4. The response is then forwarded to the Trove servers.
 
 > In our solver (`src/challenge.hpp` → `detail::xem::solve`), the `state == 85`
-> hook (`hss`) calls `xem::solve(a2)` and writes the result back through the
-> located response-sink function (`p0`, which corresponds to
-> `AC_OnProbeResponse`'s prologue) - see [the bypass strategy](#the-bypass-strategy).
+> hook (`hkAC_SendStateChange`) calls `xem::solve(challenge)` and writes the result back
+> through the located response-sink function (`oAC_OnProbeResponse`, which
+> corresponds to `AC_OnProbeResponse`'s prologue) - see [the bypass strategy](#the-bypass-strategy).
 
 ---
 
@@ -135,12 +133,12 @@ initialization path never runs - the anti-cheat is effectively **stripped**.
 
 Even with the watchdog stripped, the server still expects a valid probe response,
 so the client side must still answer the challenge. This is handled by hooking the
-`state == 85` probe dispatch (`hss` in `detail::client`) and computing `A3` locally
-via `detail::xem::solve` (RSA → Z85 → LZMA1 → MD5), then returning it through the
-located response callback.
+`state == 85` probe dispatch (`hkAC_SendStateChange` in `detail::client`) and
+computing `A3` locally via `detail::xem::solve` (RSA → Z85 → LZMA1 → MD5), then
+returning it through the located response callback.
 
 For the full algorithm, see [`architecture.md`](architecture.md) and
-[`../src/xem_update.md`](../project/src/xem_update.md).
+[`../src/xem_update.md`](../src/xem_update.md).
 
 ---
 

@@ -18,6 +18,6 @@ including how to recover a rotated RSA modulus and the `.vlizer` GUID - is in
 | Value | Location | Rotates? | See |
 |-------|----------|----------|-----|
 | RSA modulus `N` | `detail::key::kRsaN` | Yes (key rotation) | `src/xem_update.md` §1 |
-| `kM2Suffix` GUID | `detail::solve::kM2Suffix` | Rarely (constant) | `src/xem_update.md` §2 |
+| `kM2Suffix` GUID | `detail::xem::challenge::kM2Suffix` | Rarely (constant) | `src/xem_update.md` §2 |
 | LZMA params (`lc/lp/pb`) | `detail::key::Lzma::decode` | Low | `src/xem_update.md` §3 |
 | Byte patterns | `detail::client` + `xigncode::initialize` | On Trove updates | `src/xem_update.md` |

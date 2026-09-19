@@ -120,20 +120,20 @@ The response is assembled from fixed offsets (`A3_TS_OFF=2`, `A3_M1_OFF=11`,
 ## The hooks (`detail::client`)
 
 To intercept the handshake in-process, the DLL installs several hooks and
-locates hook targets with byte-pattern scans (`helper::fp`) instead of hardcoded
-addresses, because `trove.exe` shifts between game updates.
+locates hook targets with byte-pattern scans (`helper::find_pattern`) instead of
+hardcoded addresses, because `trove.exe` shifts between game updates.
 
 | Target | Hook | Behavior |
 |--------|------|----------|
 | `ws2_32.dll!send` | `hs` | Pass-through (returns `n`). |
 | `ws2_32.dll!recv` | `hr` | Pass-through (returns `n`). |
 | `ws2_32.dll!connect` | `hc` | Always returns `1` - simulates a connected socket, blocking the anti-cheat's real connections. |
-| challenge dispatcher | `hss` | Invoked with a state value; when `state == 85` the `A2` is at `v[0]`. It calls `xem::solve`, and writes the answer back via the located `p0` function. |
-| game-entry signature | `sa` | Patch two flags (via the `ra` relative-address helper) that gate the anti-cheat's probe; if they can't be patched, `pop()`. |
+| challenge dispatcher | `hkAC_SendStateChange` | Invoked with a state value; when `state == 85` the `A2` is at `v[0]`. It calls `xem::solve`, and writes the answer back via the located response sink. |
+| game-entry signature | `strip` | Patch two flags (via the relative-address helper) that gate the anti-cheat's probe; if they can't be patched, `pop()`. |
 
-`hss` is the heart of the interception: on the probe state (`85`), it reads the
-challenge pointer, solves it, and calls the located response sink
-(`pr_t p0`) with the computed `A3`.
+`hkAC_SendStateChange` is the heart of the interception: on the probe state
+(`85`), it reads the challenge pointer, solves it, and calls the located response
+sink (`oAC_OnProbeResponse`) with the computed `A3`.
 
 ## Failure handling (`pop`)
 

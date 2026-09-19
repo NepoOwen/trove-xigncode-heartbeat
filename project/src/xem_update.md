@@ -1,6 +1,6 @@
 # XEM Update Guide
 
-How to update the hardcoded values in `challenge.hpp` (and `bypass.hpp`) when
+How to update the hardcoded values in `challenge.hpp` when
 Wellbia ships a new `x3_x64.xem`.
 
 Everything the offline solver needs is either **derived from the challenge at
@@ -16,13 +16,13 @@ cannot be recomputed from the challenge alone.
 |---|---|---|---|
 | RSA modulus `N` | `detail::key::kRsaN` | **No** - needs the binary/memory | **High** (key rotation) |
 | RSA exponent `e = 65537` | `detail::key::rsa_pub` (16 squarings + 1 mul) | Standard, fixed | Very low |
-| `kM2Suffix` GUID | `detail::solve::kM2Suffix` | **No** - constant GUID in the `.vlizer` VM section | Very low (constant) |
+| `kM2Suffix` GUID | `detail::xem::challenge::kM2Suffix` | **No** - constant GUID in the `.vlizer` VM section | Very low (constant) |
 | LZMA params `lc=3 lp=0 pb=2` | `detail::key::Lzma::decode` (`pos & 3`, `prev >> 5`) | Yes - in `props` byte (`body[28]`), but currently hardcoded | Low |
 | Challenge structure (7×128 records, header offsets) | `detail::key::decode_key` | No | Low |
 | Key encoding `"_2JP" 0x04 <key[i]^i>` | `detail::key::decode_key` | No | Low |
-| Day-counter anchor (`day - 20592`, `% 99`) | `detail::solve::day_counter` / `generate_a3` | No | Very low |
-| A3 response offsets/length | `detail::solve` (`A3_*`) | No | Low |
-| `state == 85` + trove.exe byte patterns | `bypass.hpp` | No (trove.exe, not xem) | On **Trove** updates, not xem |
+| Day-counter anchor (`day - 20592`, `% 99`) | `detail::xem::challenge::day_counter` / `generate_a3` | No | Very low |
+| A3 response offsets/length | `detail::xem::challenge` (`A3_*`) | No | Low |
+| `state == 85` + trove.exe byte patterns | `challenge.hpp` | No (trove.exe, not xem) | On **Trove** updates, not xem |
 
 The daily M1 key itself is **not** hardcoded - it is decoded from each challenge
 via RSA + LZMA.
@@ -48,10 +48,10 @@ during a probe. We recover it by finding the **`[N|E]` blob**:
 
 ### Steps
 
-1. Run the game, let a probe fire (state 85); capture the challenge `a2`.
+1. Run the game, let a probe fire (state 85); capture the challenge `challenge`.
 2. Dump the process (or the loaded `x3_x64.xem` module) to a file.
 3. Collect **all** `[N|E]` candidates, then for each test `m = c^65537 mod N` on
-   a known 128-byte ciphertext record from `a2`. The correct `N` is the one where
+   a known 128-byte ciphertext record from `challenge`. The correct `N` is the one where
    `m[0] == 0x00` (the RSA record's first byte is zero and gets stripped).
 4. Convert the verified `N` to 32 little-endian `u32` limbs.
 
@@ -86,7 +86,7 @@ def collect_n(data):
 def rsa_pub(c, N):
     return pow(int.from_bytes(c, 'big'), 65537, N).to_bytes(128, 'big')
 
-# Paste the first 128-byte ciphertext record from a real a2 (body[36:164]) as hex.
+# Paste the first 128-byte ciphertext record from a real challenge (body[36:164]) as hex.
 cipher = bytes.fromhex('0000...')   # <-- 128 bytes = 256 hex chars
 
 for n in collect_n(open('dump.bin', 'rb').read()):
@@ -123,7 +123,7 @@ stops matching the `M2` field in a captured response.
 
 ### Steps (if it ever changes)
 
-1. Capture one live probe: the challenge (`a2`) and its response (`a3`).
+1. Capture one live probe: the challenge (`challenge`) and its response (`response`).
 2. From the response, read `ts` (chars 2..10) and `M2` (chars 44..76, hex).
 3. Dump the process while a probe is live (the `.vlizer` bytecode + its constants
    are runtime-generated/loaded, so a raw file scan is insufficient).
@@ -138,8 +138,8 @@ data = open('mem.dump', 'rb').read()
 guids = set(m.group(0) for m in re.finditer(
     rb'\{[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}\}', data))
 
-ts = '6aa8cf09'                     # chars 2..10 of the a3 response
-m2 = 'afa889af29dbae10467d5d1545fd60b5'   # chars 44..76 of the a3 response
+ts = '6aa8cf09'                     # chars 2..10 of the response
+m2 = 'afa889af29dbae10467d5d1545fd60b5'   # chars 44..76 of the response
 
 for g in guids:
     if hashlib.md5(ts + g).hexdigest() == m2:
@@ -152,7 +152,7 @@ byte-by-byte inside the VM), fall back to dumping the `.vlizer` section
 may XOR/obfuscate its constants, in which case it must be captured from a
 running process.
 
-Paste the result into `detail::solve::kM2Suffix`.
+Paste the result into `detail::xem::challenge::kM2Suffix`.
 
 > `M2 = MD5(ts + kM2Suffix)`. The three GUIDs inside the challenge are *not* the
 > M2 suffix - the M2 suffix is a fourth, separate GUID that only lives in the
@@ -167,7 +167,7 @@ Paste the result into `detail::solve::kM2Suffix`.
   producing garbage, parse `props` and drive `lc/lp/pb` dynamically instead.
 - **Key encoding** - if the `"_2JP"` marker, the `0x04` type byte, the
   `key[i]^i` XOR, or the `8..32` key-length window changes, key extraction breaks.
-- **Day counter** - if the two-digit prefix in the a3 response drifts, re-fit the
+- **Day counter** - if the two-digit prefix in the response drifts, re-fit the
   anchor (`20592`) and the `% 99` wrap.
 - **A3 format** - if offsets (`A3_TS_OFF`, `A3_M1_OFF`, `A3_M2_OFF`) or the total
   length change, `generate_a3` breaks.
@@ -183,4 +183,4 @@ Paste the result into `detail::solve::kM2Suffix`.
 3. `kM2Suffix` is a constant in the `.vlizer` section - skip unless `M2`
    validation fails, then scan a **memory dump** (not the file) + `MD5` check.
 4. Rebuild; verify `solve()` against the captured challenge produces the same
-   `a3` as the live response.
+   `response` as the live response.

@@ -14,7 +14,7 @@
 --
 -- Usage:
 --   local challenge = require("challenge")
---   print(challenge.solve(a2))
+--   print(challenge.solve(challenge_str))
 --
 -- If run directly:
 --   lua challenge.lua <challenge>
@@ -692,13 +692,11 @@ local function mac_compute(unix_ts, key)
     local m1_data = {}
     local m2_data = {}
 
-    -- M1 = MD5(ts + key)
     local m1_buf = {}
     for i = 1, #ts do m1_buf[#m1_buf + 1] = ts:byte(i) end
     for i = 1, #key do m1_buf[#m1_buf + 1] = key:byte(i) end
     local m1 = md5(m1_buf)
 
-    -- M2 = MD5(ts + kM2Suffix)
     local m2_buf = {}
     for i = 1, #ts do m2_buf[#m2_buf + 1] = ts:byte(i) end
     for i = 1, #kM2Suffix do m2_buf[#m2_buf + 1] = kM2Suffix:byte(i) end
